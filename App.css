@@ -1,0 +1,302 @@
+    /* import de las fuentes a utilizar */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Roboto+Mono:wght@100&family=Roboto:wght@300;900&display=swap');
+    /* configuraciones previas */
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* scroll del tamaño de la barra de navegacion para que no tape parte del contenido al estar fixed */
+    
+    section[id] {
+        scroll-margin-top: 50px;
+    }
+    /* smooth para hacer un scroll mas suave */
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .App-header {
+        background-color: rgb(20, 20, 20);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        transition: 0.7s;
+        padding: 15px;
+        z-index: 10;
+    }
+    
+    .App-header .logo img {
+        width: 12vw;
+        border-bottom: 2px solid #fff;
+    }
+    /* Barra de navegación */
+    
+    .NavBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .App-header ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .App-header ul li {
+        list-style: none;
+    }
+    
+    .App-header ul li a {
+        font-size: 20px;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        margin: 0 15px;
+        text-decoration: none;
+        color: aliceblue;
+        letter-spacing: 2px;
+        font-weight: 600;
+        transition: 0.7s;
+    }
+    /* menu activo con el color inicial de las opciones de la barra de navegación  */
+    
+    .App-header a .active {
+        color: aliceblue;
+    }
+    /* menu con el color que aparecerá al pulsar o poner el mouse sobre las opciones y el tiempo de transicion */
+    
+    .App-header a:hover {
+        color: rgb(240, 245, 98);
+        transition: ease-in .4s;
+    }
+    /* Primera sección contenedora del Carousel */
+    
+    .zona1 {
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        width: 102%;
+        height: 100vh;
+        background-position: center center;
+    }
+    
+    .zona1 h3 {
+        font-size: 3vw;
+    }
+    
+    .zona1 p {
+        font-size: 2vw;
+    }
+    /* Segunda sección contenedora de la presentación */
+    
+    .zona2 {
+        font-family: 'Roboto', sans-serif;
+        padding-top: 0px;
+        text-align: center;
+        color: aliceblue;
+        width: 102%;
+        height: 93vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* columnas con los 3 párrafos */
+    
+    .zona2 .capa {
+        display: flex;
+    }
+    
+    .zona2 .container1 {
+        width: 25vw;
+        border: 0.5px solid #fff;
+        margin: 55px;
+        height: 500px;
+    }
+    
+    .zona2 .container1 h1 {
+        background-color: rgb(20, 20, 20);
+        border-bottom: 0.5px solid #fff;
+        padding: 8px;
+        width: 100%;
+    }
+    
+    .zona2 .container2 {
+        width: 25vw;
+        border: 0.5px solid #fff;
+        margin: 55px;
+        height: 500px;
+    }
+    
+    .zona2 .container2 h1 {
+        background-color: rgb(20, 20, 20);
+        border-bottom: 0.5px solid #fff;
+        padding: 8px;
+        width: 100%;
+    }
+    
+    .zona2 .container3 {
+        width: 25vw;
+        border: 0.5px solid #fff;
+        margin: 55px;
+        height: 500px;
+    }
+    
+    .zona2 .container3 h1 {
+        background-color: rgb(20, 20, 20);
+        border-bottom: 0.5px solid #fff;
+        padding: 8px;
+        width: 100%;
+    }
+    /* transiciones de sombreado  */
+    
+    .zona2 figure {
+        position: relative;
+        width: 102%;
+        height: 90vh;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .zona2 figure img {
+        width: 100%;
+        height: 100%;
+        transition: all 600ms ease-out;
+    }
+    
+    .zona2 figure .capa {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(20, 20, 20, 0.8);
+        transition: all 600ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    
+    .zona2 figure:hover>.capa {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .zona2 figure:hover>.capa h3 {
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    /* Tercera sección contenedora de los cards con catálogo  */
+    
+    .zona3 {
+        margin-top: -25px;
+        padding-top: 80px;
+        width: 102%;
+        height: 95vh;
+        background-color: rgb(20, 20, 20);
+    }
+    
+    .zona3 h1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    /* Cuarta Sección, contenedor del formulario de contacto */
+    
+    .zona4 {
+        margin-top: -15px;
+        padding-top: 80px;
+        width: 102%;
+        height: 95vh;
+        background-image: url('./images/formwallpaper.jpeg');
+        color: #fff;
+        text-align: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .zona4 h1 {
+        padding-top: 200px;
+        font-size: 60px;
+    }
+    
+    .zona4 p {
+        font-size: 30px;
+    }
+    /* Formulario */
+    
+    .zona4 form {
+        font-size: 18px;
+        margin-top: 70px;
+        margin-left: 380px;
+        width: 50%;
+        border: 0.5px solid #fff;
+        align-items: center;
+    }
+    
+    .zona4 h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 40px;
+        border: 0.5px solid #fff;
+    }
+    
+    .zona4 form .mb-3 {
+        width: 85%;
+        padding-left: 100px;
+    }
+    /* boton del formulario  */
+    
+    .zona4 button {
+        margin: 20px;
+        width: 80px;
+        color: #fff;
+        background-color: black;
+        border: 0.5px solid #fff;
+        font-size: 16px;
+    }
+    /* footer */
+    
+    .footer {
+        text-align: center;
+        padding: 30px;
+        width: 102%;
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        background-color: rgb(20, 20, 20);
+    }
+    
+    .footer a {
+        color: aliceblue;
+    }
+    
+    .footer a .active {
+        color: aliceblue;
+    }
+    /* footer con el color que aparecerá al pulsar los iconos de redes sociales */
+    
+    .footer a:hover {
+        color: rgb(240, 245, 98);
+        transition: ease-in .4s;
+    }
+    
+    .footer-barra {
+        width: 102%;
+        border-bottom: 0.5px solid #fff;
+    }
+    
+    .footer span {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: rgb(240, 245, 98);
+    }
+    
+    .footer h3 {
+        font-size: 15px;
+    }
